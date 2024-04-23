@@ -2,3 +2,8 @@
 *.pyc
 release-binary
 .idea/
+cmd/etcdsvr/default.etcd/*
+cmd/etcdsvr/default.etcd/member/wal/*
+cmd/etcdsvr/etcdsvr.pid
+etcdsvr.pid
+etcdsvr.txt
