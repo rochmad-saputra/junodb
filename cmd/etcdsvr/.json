@@ -1,12 +1,12 @@
 {
-    "advertise-client-urls": ":2379",
+    "advertise-client-urls": "http://172.25.199.58:2379",
     "data-dir": "./.etcd",
-    "initial-advertise-peer-urls": ":2380",
-    "initial-cluster": "127.0.0.1=http://127.0.0.1:2380",
+    "initial-advertise-peer-urls": "http://172.25.199.58:2380",
+    "initial-cluster": "172.25.199.58=http://172.25.199.58:2380",
     "initial-cluster-token": "juno",
-    "listen-client-urls": ":2379",
-    "listen-peer-urls": ":2380",
+    "listen-client-urls": "http://172.25.199.58:2379",
+    "listen-peer-urls": "http://172.25.199.58:2380",
     "max-txn-ops": 6000,
-    "name": "",
+    "name": "172.25.199.58",
     "strict-reconfig-check": false
 }

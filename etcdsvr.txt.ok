@@ -1,0 +1,4 @@
+etcdsvr.peer_names=p1
+etcdsvr.initial_cluster=192.168.68.120
+etcdsvr.client_port=2379
+etcdsvr.peer_port=2378

@@ -1,0 +1,18 @@
+#Name of the application 
+AppName ="junos2"
+
+[Sec]
+  
+  AppName = "junoserv"
+
+  #Path to keystore
+  KeyStoreFilePath = "./secrets/keystore.toml"
+  
+  #Path to server certificate
+  CertPemFilePath  = "./secrets/server.crt"
+  
+  #Path to server pem file
+  KeyPemFilePath   = "./secrets/server.pem"
+  
+  #Path to CA certificate
+  CAFilePath = "./secrets/ca.crt"

@@ -26,15 +26,15 @@ etcdsvr.peer_port=2380
 #etcdsvr.peer_host=127.0.0.1
 
 # Set etcd host ip
-etcdsvr.initial_cluster=127.0.0.1
-etcdsvr.etcd_name=localhost
+etcdsvr.initial_cluster=rochmads-Virtual-Machine
+etcdsvr.etcd_name=rochmads-Virtual-Machine
 # Path to data directory
 etcdsvr.data_dir=.
 
 # 
 # Initial cluster should have at least one etcd.
 #
-etcdsvr.peer_names=127.0.0.1
+etcdsvr.peer_names=rochmads-Virtual-Machine
 #
 # Example cluster of 3 etcds
 #
