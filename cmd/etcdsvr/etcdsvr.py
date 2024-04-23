@@ -270,7 +270,9 @@ class Config():
                     self.initial_cluster = val
     
         name_list = self.peer_names.split('^')
-        peer_hosts = self.initial_cluster.split('^')            
+#        name_list = self.peer_names
+        peer_hosts = self.initial_cluster.split('^')
+#        peer_hosts = self.initial_cluster
         host_name = get_my_host()
         host_ip_list = get_my_ip(host_name)
         
@@ -291,6 +293,7 @@ class Config():
             ip = "%s:%d" % (peer_hosts[i], self.peer_port)
             list_ip.append(ip)
 
+        self.local_endpoint = "127.0.0.1:2379"
         self.cluster_endpoints = ','.join(list_ip)
         if status_only:
             return None
@@ -317,10 +320,12 @@ class Config():
     
         self.cluster_url = ','.join(list)
     
+        print(self.client_port, self.peer_port, self.initial_cluster, self.etcd_name)
         if (self.client_port == 0 or
             self.peer_port == 0 or
-            self.initial_cluster == "" or
-            self.etcd_name == ""):
+            self.peer_port == 0):
+#            self.initial_cluster == "" or
+#            self.etcd_name == ""):
                 return "[ERROR] Bad config in etcdsvr.txt."
 
         if ip_in_use(self.host_ip[7:], self.client_port):
@@ -491,7 +496,7 @@ if __name__ == "__main__":
         f.write("%d\n" % (os.getpid()))
         
     cfg = Config()
-    err = cfg.parse_cfg(False)
+    err = cfg.parse_cfg(True)
     if err:
         print(err)
         print("[ERROR] Failed to start etcd.")
@@ -501,3 +506,9 @@ if __name__ == "__main__":
     slow_mode = False
   
     mgr.watch_and_recycle(cfg)
+
+
+try:
+    fails()
+except Exception as ex:
+    print(ex)

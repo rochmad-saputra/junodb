@@ -18,22 +18,23 @@
 #
 
 # Set client port 
-etcdsvr.client_port=
+etcdsvr.client_port=2379
 
 # Set peer port
-etcdsvr.peer_port=
+etcdsvr.peer_port=2380
+
+#etcdsvr.peer_host=127.0.0.1
 
 # Set etcd host ip
-etcdsvr.initial_cluster=
-
+etcdsvr.initial_cluster=127.0.0.1
+etcdsvr.etcd_name=localhost
 # Path to data directory
 etcdsvr.data_dir=.
 
 # 
 # Initial cluster should have at least one etcd.
 #
-etcdsvr.peer_names=p1
-
+etcdsvr.peer_names=127.0.0.1
 #
 # Example cluster of 3 etcds
 #

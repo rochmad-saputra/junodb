@@ -1,0 +1,12 @@
+{
+    "advertise-client-urls": ":2379",
+    "data-dir": "./.etcd",
+    "initial-advertise-peer-urls": ":2380",
+    "initial-cluster": "127.0.0.1=http://127.0.0.1:2380",
+    "initial-cluster-token": "juno",
+    "listen-client-urls": ":2379",
+    "listen-peer-urls": ":2380",
+    "max-txn-ops": 6000,
+    "name": "",
+    "strict-reconfig-check": false
+}
