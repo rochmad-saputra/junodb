@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 #  
 #  Copyright 2023 PayPal Inc.
 #  
